@@ -8,10 +8,6 @@ The following document describes the structure of reusable and self-contained pa
 
 Bundles **must** use [semantic versioning](http://semver.org).
 
-## Manifest
-
-Every package MUST have a JSON document at its root level containing meta information as described below.
-
 ## Files
 
 An example overview of the possible organization within a package:
@@ -29,11 +25,16 @@ An example overview of the possible organization within a package:
     Package.json
 
 
+### Manifest
+
+Every package MUST have a JSON document at its root level containing meta information as described below.
+
 ### Source Code
 
 * All PureBasic source code files MUST adhere to the [PureBundle Code Standard](https://github.com/peterthomashorn/purebundle-code-standard).
 * Additionally, all code MUST be encapsulated within a `Module` and SHOULD NOT expose anything more than what is supposed to be used externally.
 * A PureBasic IDE project MAY be provided with the source code
+* If the package is a library, then a single source code file to include all package features MUST be available as `Sources/Main.pbi`
 
 ### Dependencies
 
