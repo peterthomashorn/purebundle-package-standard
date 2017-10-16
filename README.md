@@ -29,6 +29,33 @@ An example overview of the possible organization within a package:
 
 Every package MUST have a JSON document at its root level containing meta information as described below.
 
+    {
+      "name": "Example",
+      "description": "Lorem ipsum, sit dolor amet.",
+      "type": "Library",
+      "url": "https://github.com/vendor/package",
+      "repository": "https://github.com/vendor/package.git",
+      "keywords": [
+        "Development",
+        "Tools"
+      ],
+      "license": "MIT",
+      "compatibility": {
+        "windows": ">=5.00",
+        "macos": ">=5.00",
+        "linux": ">=5.00"
+      }
+    }
+
+* The package `name` MUST be specified. The name MUST be alphanumeric and MUST NOT contain any whitespace characters.
+* The package `description` MAY be specified.
+* The package `type` SHOULD be specified. It can either be `project` or `library`. If omitted, it implicitly is interpreted as `library`.
+* The package `url` MAY be specified. It MAY be used to reference a website of related authors or the project itself.
+* The package `repository` URL MAY be specified. It MAY be used to reference the development repository of the project.
+* The package `keywords` MAY be specified. Keywords can improve visibility in eventual package registries.
+* The package `license` SHOULD be specified as an abbreviation.
+* The package `compatibility` SHOULD be specified. If omitted, it implicitly is interpreted as compatible with all PureBasic platforms and versions.
+
 ### Source Code
 
 * All PureBasic source code files MUST adhere to the [PureBundle Code Standard](https://github.com/peterthomashorn/purebundle-code-standard).
